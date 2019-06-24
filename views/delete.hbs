@@ -1,0 +1,48 @@
+{{#if user.profile.firstName}}
+<h1>{{user.profile.firstName}}'s Dashboard</h1>
+{{/if}}
+<a href='/dashboard'>Go to dashboard</a>
+
+
+<h1>{{msg}}</h1>
+
+{{#if usersArray}}
+
+
+
+
+<dl>
+  <table style="width: 100%;font-size: 400;text-align: center">
+    <thead>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+    </thead>
+    <tbody>
+      
+      {{#each usersArray}}
+      <tr>
+        <form method="post">
+          <td>{{profileDetails.firstName}}
+          </td>
+          <td>{{profileDetails.lastName}}</td>
+          <td>{{profileDetails.email}}</td>
+          <td><button type="submit" name="id" value={{id}}>Delete </button></td>
+          
+      </tr>
+      {{!-- <tr type="hidden">
+        <form action='/delete' method="post">
+          <td type="hidden">{{profileDetails.firstName}}
+          </td>
+          <td>{{profileDetails.lastName}}</td>
+          <td>{{profileDetails.email}}</td>
+          <td><button type="submit" name="id" value={{id}}>Delete </button></td>
+          
+      </tr> --}}
+      {{/each}}
+
+    </tbody>
+  </table>
+
+</dl>
+{{/if}}

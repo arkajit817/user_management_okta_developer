@@ -1,0 +1,37 @@
+<h1>{{user.profile.firstName}}'s Dashboard</h1>
+
+<p>Here's where you would put something useful. How about your profile info?</p>
+<dl>
+  {{#each descriptionList}}
+    <dt>{{this.term}}</dt>
+    <dd>{{this.details}}</dd>
+  {{/each}}
+</dl>
+
+
+<form  method="post">
+  {{!-- <label for="groupName">
+    Group Name
+    <input id="groupName" name="groupName" required value="{{body.groupName}}" />
+    <label class="error">{{errors.groupName}}</label>
+  </label> --}}
+  
+  
+  
+
+  <button type="submit">Create Admin Group</button>
+</form>
+
+
+<form action='/admin' method="get">
+  {{!-- <label for="groupName">
+    Group Name
+    <input id="groupName" name="groupName" required value="{{body.groupName}}" />
+    <label class="error">{{errors.groupName}}</label>
+  </label> --}}
+  
+  
+  
+
+  <button type="submit">Go To Admin Page</button>
+</form>
